@@ -23,5 +23,5 @@ Celem analizy było wyciągnięcie kluczowych wskaźników biznesowych dotycząc
 3. **Okresy szczytowe**: Największe piki sprzedażowe zauważono w miesiącach jesienno-zimowych, co wskazuje na silne trendy sezonowe (np. zakupy świąteczne).
 
 ## Struktura Plików w Projekcie
-- `analiza_sprzedazy.sql` – Mój kod SQL użyty do wydobycia powyższych informacji z surowej tabeli.
+- [Skrypt SQL](./analiza_sprzedazy.sql) – Mój kod SQL użyty do wydobycia powyższych informacji z surowej tabeli.
 - `dashboard.png` – Obraz przedstawiający finalne wykresy analityczne.
