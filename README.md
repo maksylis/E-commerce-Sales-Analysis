@@ -1,23 +1,27 @@
-# E-commerce Sales Analysis (Projekt do portfolio)
+# Analiza Sprzedaży E-commerce (Projekt do Portfolio)
 
-Projekt z zakresu analizy danych, prezentujący umiejętności wyciągania danych za pomocą SQL, ich czyszczenia oraz wizualizacji na bazie zbioru danych e-commerce.
+## Źródło Danych
+Projekt opiera się na publicznym zbiorze danych pochodzącym z platformy Kaggle:
+*[Kaggle - Sales Forecasting Dataset](https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting)*
 
-## Opis Projektu
-Celem projektu była analiza danych transakcyjnych w celu uzyskania przydatnych biznesowo wniosków dotyczących najlepszych produktów, produktów generujących najniższą sprzedaż oraz okresów szczytowych.
+Oryginalny plik train.csv (zawierający tysiące wierszy danych sprzedażowych) został zaimportowany przeze mnie do bazy danych SQLite jako główna tabela o nazwie sales. Na tej tabeli operuje cały kod analityczny w tym projekcie.
 
-## Narzędzia i Technologie
-- **SQL (SQLite / DB Browser)**: Filtrowanie danych, agregacja, operacje na tekstach (`substr`) oraz sortowanie i ranking (`ORDER BY`).
-- **Excel**: Czyszczenie danych, układ i generowanie wykresów.
+## Cel Projektu
+Celem analizy było wyciągnięcie kluczowych wskaźników biznesowych dotyczących przychodów (Sales) oraz identyfikacja najlepiej i najgorzej sprzedających się podkategorii produktów, a także zbadanie trendów w czasie.
+
+## Wykorzystane Narzędzia
+- **SQL (SQLite / DB Browser)**: Ekstrakcja danych, filtrowanie, agregacja (funkcje GROUP BY, SUM) oraz manipulacja ciągami znaków (SUBSTR) w celu wyciągnięcia trendów miesięcznych.
+- **Excel**: Wizualizacja wyników zapytań SQL w formie przejrzystego dashboardu.
 - **GitHub**: Dokumentacja projektu i prezentacja w portfolio.
 
-## Kluczowe Wnioski i Wnioski Biznesowe
-1. **Najlepsze produkty**: Podkategorie takie jak *Phones* i *Chairs* generują największy całkowity przychód.
-2. **Najsłabsze produkty**: *Fasteners* generują najniższy przychód, co wskazuje na potencjalne nieefektywności w asortymencie.
-3. **Okresy szczytowe**: Okresy pod koniec roku (szczególnie listopad i grudzień) systematycznie wykazują najwyższe skoki przychodów, co wskazuje na silne trendy sezonowe (np. zakupy świąteczne).
+## Dashboard (Wizualizacja)
+![Dashboard](./dashboard.png)
 
-## Zawartość Repozytorium
-- `analiza_sprzedazy.sql` – Kompletny, skomentowany skrypt SQL użyty do analizy danych.
-- `dashboard.png` – Wizualna reprezentacja końcowego dashboardu zawierającego wykresy i kluczowe metryki.
+## Kluczowe Wnioski Biznesowe
+1. **Najlepsze produkty**: Największy przychód generują podkategorie: Phones, Chairs oraz Storage.
+2. **Najsłabsze produkty**: Najmniejszy przychód przynoszą podkategorie: Fasteners, Labels oraz Envelopes. Należy rozważyć sens ich dalszego magazynowania lub zmienić strategię marketingową.
+3. **Okresy szczytowe**: Największe piki sprzedażowe zauważono w miesiącach jesienno-zimowych, co wskazuje na silne trendy sezonowe (np. zakupy świąteczne).
 
----
-*Źródło danych: [Kaggle - Sales Forecasting Dataset](https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting)*
+## Struktura Plików w Projekcie
+- `analiza_sprzedazy.sql` – Mój kod SQL użyty do wydobycia powyższych informacji z surowej tabeli.
+- `dashboard.png` – Obraz przedstawiający finalne wykresy analityczne.
