@@ -4,13 +4,13 @@
 Projekt opiera się na publicznym zbiorze danych pochodzącym z platformy Kaggle:
 *[Kaggle - Sales Forecasting Dataset](https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting)*
 
-Oryginalny plik train.csv (zawierający tysiące wierszy danych sprzedażowych) został zaimportowany przeze mnie do bazy danych SQLite jako główna tabela o nazwie sales. Na tej tabeli operuje cały kod analityczny w tym projekcie.
+Oryginalny plik `train.csv` (zawierający tysiące wierszy danych sprzedażowych) został zaimportowany przeze mnie z platformy Kaggle do bazy danych SQLite jako główna tabela o nazwie sales. Na tej tabeli operuje cały kod analityczny w tym projekcie.
 
 ## Cel Projektu
 Celem analizy było wyciągnięcie kluczowych wskaźników biznesowych dotyczących przychodów (Sales) oraz identyfikacja najlepiej i najgorzej sprzedających się podkategorii produktów, a także zbadanie trendów w czasie.
 
 ## Wykorzystane Narzędzia
-- **SQL (SQLite / DB Browser)**: Ekstrakcja danych, filtrowanie, agregacja (funkcje GROUP BY, SUM) oraz manipulacja ciągami znaków (SUBSTR) w celu wyciągnięcia trendów miesięcznych.
+- **SQL (SQLite / DB Browser)**: Ekstrakcja danych, filtrowanie, agregacja (funkcje `GROUP BY`, `SUM`) oraz manipulacja ciągami znaków (`SUBSTR`) w celu wyciągnięcia trendów miesięcznych.
 - **Excel**: Wizualizacja wyników zapytań SQL w formie przejrzystego dashboardu.
 - **GitHub**: Dokumentacja projektu i prezentacja w portfolio.
 
